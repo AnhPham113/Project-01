@@ -48,10 +48,16 @@ a {
 
 /* header */
 
-header {
-    position: relative;
+.fixed-header {
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; */
+    position: sticky;
+    top: -26px;
+    padding-bottom: 12px;
+    z-index: 1;
     background-color: #e6f0ff;
-    height: 100vh;
 }
 
 /* nav */
@@ -108,12 +114,14 @@ header {
 
 /* hero */
 
-.hero {
-    margin-top: 130px;
+.hero-wrap {
+    height: calc(100vh - 90px);
+    background-color: #e6f0ff;
 }
 
 .hero .info {
     width: 51%;
+    padding-top: 130px;
 }
 
 .hero .sub-title {
