@@ -54,10 +54,6 @@ a {
 /* header */
 
 .fixed-header {
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    right: 0; */
     position: sticky;
     top: -26px;
     padding-bottom: 12px;
@@ -280,7 +276,7 @@ a {
     line-height: 1.5;
 }
 
-.list-guide img {
+.list-guide .icon {
     margin-left: 8px;
 }
 
@@ -329,7 +325,8 @@ a {
 }
 
 .features .list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 70px;
 }

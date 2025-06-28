@@ -89,12 +89,28 @@
 
         <!-- styles -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <!-- responsive -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- header -->
+        <!-- Desktop-header -->
         <header class="fixed-header">
             <div class="content">
                 <nav class="nav-bar">
+                    <!-- tablet+mobile-menu -->
+                    <label for="menu-checkbox">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentcolor"
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- logo -->
                     <a href="#">
                         <img src="./assets/img/Logo.svg" alt="Besnik." />
@@ -110,11 +126,72 @@
                     </ul>
 
                     <!--action-->
-                    <div class="action">
+                    <div class="action mobile-action">
                         <a href="#!" class="action-link">Sign in</a>
                         <a href="#!" class="btn action-btn">Sign up</a>
                     </div>
                 </nav>
+            </div>
+        </header>
+
+        <!-- Mobile+Tablet-header -->
+        <header class="mobile-header">
+            <!-- checkbox-menu -->
+            <input
+                type="checkbox"
+                name="menu-checkbox"
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+
+            <!-- overlay-bg -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- menu-content -->
+            <div class="menu-drawer">
+                <!-- logo -->
+                <a href="#">
+                    <img src="./assets/img/Logo.svg" alt="Besnik." />
+                </a>
+
+                <!-- navigation -->
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a href="#resources">Resources</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- mobile-close-overlay -->
+                <label for="menu-checkbox" class="mobile-close-overlay">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"
+                    >
+                        <path
+                            fill="currentcolor"
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        />
+                    </svg>
+                </label>
+
+                <!--mobile-action-->
+                <div class="action">
+                    <a href="#!" class="btn action-btn">Sign up</a>
+                    <a href="#!" class="action-link">Sign in</a>
+                </div>
             </div>
         </header>
 
@@ -160,7 +237,9 @@
                         <p class="desc">
                             More than 45,000+ companies trust besnik
                         </p>
-                        <p class="desc">5 Star Ratings (2k+ Review)</p>
+                        <p class="desc hide-on-mobile">
+                            5 Star Ratings (2k+ Review)
+                        </p>
                     </div>
                     <div class="client-logos">
                         <a href="#!">
@@ -212,7 +291,6 @@
                             <img
                                 src="./assets/img/iconguide-btn-2.svg"
                                 alt="Buyer Guides"
-                                class="icon"
                             />
                             <h3 class="title">Buyer Guides</h3>
                             <a href="#!" class="link">
@@ -220,6 +298,7 @@
                                 <img
                                     src="./assets/img/arrow.svg"
                                     alt="how to buy"
+                                    class="icon"
                                 />
                             </a>
                         </div>
@@ -227,7 +306,6 @@
                             <img
                                 src="./assets/img/iconguide-btn.svg"
                                 alt="Buyer Guides"
-                                class="icon"
                             />
                             <h3 class="title">Renter Guides</h3>
                             <a href="#!" class="link">
@@ -235,6 +313,7 @@
                                 <img
                                     src="./assets/img/arrow.svg"
                                     alt="How to rent"
+                                    class="icon"
                                 />
                             </a>
                         </div>
@@ -242,7 +321,6 @@
                             <img
                                 src="./assets/img/iconguide-btn-1.svg"
                                 alt="Buyer Guides"
-                                class="icon"
                             />
                             <h3 class="title">Seller Guides</h3>
                             <a href="#!" class="link">
@@ -250,6 +328,7 @@
                                 <img
                                     src="./assets/img/arrow.svg"
                                     alt="How to sell"
+                                    class="icon"
                                 />
                             </a>
                         </div>
@@ -270,7 +349,7 @@
                             <p class="desc">
                                 Everything you need to know when you're looking
                             </p>
-                            <a href="#!" class="link">
+                            <a href="#!" class="link hide-on-mobile">
                                 <span>View All Properties</span>
                                 <img
                                     src="./assets/img/arrow.svg"
@@ -426,6 +505,10 @@
                             </div>
                         </div>
                     </div>
+                    <!-- mobile-btn -->
+                    <a href="#!" class="btn view-all show-on-mobile"
+                        >View All Properties</a
+                    >
                 </div>
             </div>
 
@@ -434,13 +517,20 @@
                 <div class="content">
                     <div class="row">
                         <div class="img-block">
+                            <!-- img on desktop + tablet -->
                             <img
-                                class="image"
+                                class="image hide-on-mobile"
                                 src="./assets/img/stats.jpg"
                                 alt="You’ve found a neighborhood you love."
                             />
+                            <!-- img on mobile -->
+                            <img
+                                class="image show-on-mobile"
+                                src="./assets/img/Feature-2.jpg"
+                                alt="You’ve found a neighborhood you love."
+                            />
                             <div class="trend-stats">
-                                <div class="row">
+                                <div class="row mobile-tablet-row">
                                     <strong class="value"
                                         >40,000 <span>+</span></strong
                                     >
